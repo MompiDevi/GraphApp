@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSInterviewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAB-7S-tdE" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="41" width="375" height="341"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data to show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4B3-oj-60W">
+                                <rect key="frame" x="124.5" y="407" width="126.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cAB-7S-tdE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Oj-zK-WG0"/>
+                            <constraint firstItem="4B3-oj-60W" firstAttribute="top" secondItem="cAB-7S-tdE" secondAttribute="bottom" constant="25" id="Uxg-3j-Npj"/>
+                            <constraint firstItem="cAB-7S-tdE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="41" id="ceZ-lT-BJI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cAB-7S-tdE" secondAttribute="bottom" constant="285" id="iUy-6l-ntQ"/>
+                            <constraint firstAttribute="trailing" secondItem="cAB-7S-tdE" secondAttribute="trailing" id="jYK-aY-tRV"/>
+                            <constraint firstItem="4B3-oj-60W" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wvq-8A-kOs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chart" destination="cAB-7S-tdE" id="rr4-9j-GMb"/>
+                        <outlet property="countLabel" destination="4B3-oj-60W" id="bIb-3U-Qxo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="71.514242878560722"/>
+        </scene>
+    </scenes>
+</document>
